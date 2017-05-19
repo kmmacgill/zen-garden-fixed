@@ -2,6 +2,9 @@
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 @import url(https://cdn.rawgit.com/arthursucks/opencomicfont/master/import.css);
+@font-face { font-family: comicTitle; src: url('fonts/KGHAPPY.ttf'); }
+@font-face { font-family: comic2; src: url('fonts/KICOB___.TTF'); }
+@font-face { font-family: comic1; src: url('fonts/SF Wonder Comic.ttf'); }
 // color palette - these colors will be the color swatches of the Colors section
 
 $color-1: #5f8ee4; // Cornflower Blue - Action color
@@ -22,7 +25,9 @@ $alert: $color-3;  // red
 // fonts
 
 $primary-font: 'Merriweather', serif;
-$secondary-font: 'Comic Sans MS', sans;
+$comicTitle: comicTitle;
+$comic1: comic1;
+$comic2: comic2;
 
 /* -------------------------------- 
 
@@ -159,63 +164,92 @@ xButtons
 
 -------------------------------- */
 
-.btn {
-	border: none;
-	box-shadow: none;
-	border-radius: .25em;
-	font: {
-		size: 1.4rem;
-		family: $secondary-font;
-	}
-	color: $color-5;
-	padding: .6em 2.2em;
-	cursor: pointer;
-	background: $color-1;
-
-	&:focus {
-		outline: none;
+.cd-buttons .cd-box {
+	#pow {
+		padding: 50px;
+		text-decoration: none;
+		color: red;
+		font-weight: bold;
+		font-size: 2em;
+		background: url("http://jtemerson.net/sandbox/pow.png") center no-repeat;
 	}
 
-	.no-touch &:hover {
-		background: lighten($color-1, 5%);
+	#thought {
+		padding: 50px;
+		text-decoration: none;
+		color: red;
+		font-weight: bold;
+		font-size: 2em;
+		background: url("http://jtemerson.net/sandbox/thought-bubble.png") center no-repeat;
 	}
 
-	&.btn-success {
-		background: $success;
-
-		.no-touch &:hover {
-			background: lighten($success, 5%);
-		}
-	}
-
-	&.btn-alert {
-		background: $alert;
-
-		.no-touch &:hover {
-			background: lighten($alert, 5%);
-		}
-	}
-
-	&.btn-outline {
-		color: $color-1;
-		background: transparent;
-		box-shadow: inset 0 0 0 1px $color-1;
-
-		.no-touch &:hover {
-			color: $color-5;
-			background: $color-1;
-		}
-	}
-
-	@include MQ(S) {
-		font-size: 1.6rem;
+	#speech {
+		padding: 50px;
+		text-decoration: none;
+		color: red;
+		font-weight: bold;
+		font-size: 2em;
+		background: url("http://jtemerson.net/sandbox/speech-bubble.png") center no-repeat;
 	}
 }
 
-.cd-buttons .cd-box:nth-of-type(2) span {
-	/* CSS class name color */ 
-	color: $color-1;
-}
+//.btn {
+//	border: none;
+//	box-shadow: none;
+//	border-radius: .25em;
+//	font: {
+//		size: 1.4rem;
+//		family: $comicTitle;
+//	}
+//	color: $color-5;
+//	padding: .6em 2.2em;
+//	cursor: pointer;
+//	background: $color-1;
+//
+//	&:focus {
+//		outline: none;
+//	}
+//
+//	.no-touch &:hover {
+//		background: lighten($color-1, 5%);
+//	}
+//
+//	&.btn-success {
+//		background: $success;
+//
+//		.no-touch &:hover {
+//			background: lighten($success, 5%);
+//		}
+//	}
+//
+//	&.btn-alert {
+//		background: $alert;
+//
+//		.no-touch &:hover {
+//			background: lighten($alert, 5%);
+//		}
+//	}
+//
+//	&.btn-outline {
+//		color: $color-1;
+//		background: transparent;
+//		box-shadow: inset 0 0 0 1px $color-1;
+//
+//		.no-touch &:hover {
+//			color: $color-5;
+//			background: $color-1;
+//		}
+//	}
+//
+//	@include MQ(S) {
+//		font-size: 1.6rem;
+//	}
+//}
+//
+//.cd-buttons .cd-box:nth-of-type(2) span {
+//	/* CSS class name color */
+//	color: $color-1;
+//}
 
 /* -------------------------------- 
 
@@ -225,8 +259,8 @@ xIcons
 
 .cd-icons li {
 	/* icons size */
-	width: 32px;
-	height: 32px;
+	width: 370px;
+	height: 285px;
 }
 
 @import 'partials/basic-style';

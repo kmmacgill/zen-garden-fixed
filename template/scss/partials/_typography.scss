@@ -4,9 +4,15 @@ xTypography
 
 -------------------------------- */
 
-h1, h2 {
-  font-family: $secondary-font;
+h1 {
+  font-family: $comicTitle;
   color: $color-2;
+}
+h2 {
+  font-family: $comic1;
+}
+h3 {
+  font-family: $comic2;
 }
 
 h1 {
@@ -33,6 +39,18 @@ h2 {
     font-size: 1.8rem;
     margin: 1em 0 1.4em;
   }
+}
+
+.cd-purpose .cd-box p {
+  font-family: $comic2;
+}
+
+.cd-typography .cd-box .p1 {
+  font-family: $comic1;
+}
+
+.cd-typography .cd-box .p2 {
+  font-family: $comic2;
 }
 
 section > h2::before {

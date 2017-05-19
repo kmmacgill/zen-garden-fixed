@@ -1,4 +1,13 @@
 @import url(https://cdn.rawgit.com/arthursucks/opencomicfont/master/import.css);
+@font-face {
+  font-family: comicTitle;
+  src: url("../scss/fonts/KGHAPPY.ttf"); }
+@font-face {
+  font-family: comic2;
+  src: url("../scss/fonts/KICOB___.TTF"); }
+@font-face {
+  font-family: comic1;
+  src: url("../scss/fonts/SF Wonder Comic.ttf"); }
 /* -------------------------------- 
 
 xBackground 
@@ -96,9 +105,15 @@ main > h1 {
 xTypography
 
 -------------------------------- */
-h1, h2 {
-  font-family: "Comic Sans MS", sans;
+h1 {
+  font-family: comicTitle;
   color: #19191a; }
+
+h2 {
+  font-family: comic1; }
+
+h3 {
+  font-family: comic2; }
 
 h1 {
   font-size: 2.4rem;
@@ -121,6 +136,15 @@ h2 {
       font-size: 1.8rem;
       margin: 1em 0 1.4em; } }
 
+.cd-purpose .cd-box p {
+  font-family: comic2; }
+
+.cd-typography .cd-box .p1 {
+  font-family: comic1; }
+
+.cd-typography .cd-box .p2 {
+  font-family: comic2; }
+
 section > h2::before {
   /* number before each section title */
   color: silver; }
@@ -142,42 +166,27 @@ p {
 xButtons 
 
 -------------------------------- */
-.btn {
-  border: none;
-  box-shadow: none;
-  border-radius: .25em;
-  font-size: 1.4rem;
-  font-family: "Comic Sans MS", sans;
-  color: #ffffff;
-  padding: .6em 2.2em;
-  cursor: pointer;
-  background: #5f8ee4; }
-  .btn:focus {
-    outline: none; }
-  .no-touch .btn:hover {
-    background: #759de8; }
-  .btn.btn-success {
-    background: #6fce72; }
-    .no-touch .btn.btn-success:hover {
-      background: #82d485; }
-  .btn.btn-alert {
-    background: #e4655f; }
-    .no-touch .btn.btn-alert:hover {
-      background: #e87a75; }
-  .btn.btn-outline {
-    color: #5f8ee4;
-    background: transparent;
-    box-shadow: inset 0 0 0 1px #5f8ee4; }
-    .no-touch .btn.btn-outline:hover {
-      color: #ffffff;
-      background: #5f8ee4; }
-  @media only screen and (min-width: 768px) {
-    .btn {
-      font-size: 1.6rem; } }
-
-.cd-buttons .cd-box:nth-of-type(2) span {
-  /* CSS class name color */
-  color: #5f8ee4; }
+.cd-buttons .cd-box #pow {
+  padding: 50px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  font-size: 2em;
+  background: url("http://jtemerson.net/sandbox/pow.png") center no-repeat; }
+.cd-buttons .cd-box #thought {
+  padding: 50px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  font-size: 2em;
+  background: url("http://jtemerson.net/sandbox/thought-bubble.png") center no-repeat; }
+.cd-buttons .cd-box #speech {
+  padding: 50px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  font-size: 2em;
+  background: url("http://jtemerson.net/sandbox/speech-bubble.png") center no-repeat; }
 
 /* -------------------------------- 
 
@@ -186,8 +195,8 @@ xIcons
 -------------------------------- */
 .cd-icons li {
   /* icons size */
-  width: 32px;
-  height: 32px; }
+  width: 370px;
+  height: 285px; }
 
 /* -------------------------------- 
 
@@ -647,21 +656,11 @@ section {
   background-repeat: no-repeat;
   margin: 1em; }
 .cd-icons .cd-icon-1 {
-  background-image: url("../assets/icons/icon-1.svg"); }
+  background-image: url("../assets/icons/htmlValidator.PNG"); }
 .cd-icons .cd-icon-2 {
-  background-image: url("../assets/icons/icon-2.svg"); }
+  background-image: url("../assets/icons/ironcat.png"); }
 .cd-icons .cd-icon-3 {
-  background-image: url("../assets/icons/icon-3.svg"); }
-.cd-icons .cd-icon-4 {
-  background-image: url("../assets/icons/icon-4.svg"); }
-.cd-icons .cd-icon-5 {
-  background-image: url("../assets/icons/icon-5.svg"); }
-.cd-icons .cd-icon-6 {
-  background-image: url("../assets/icons/icon-6.svg"); }
-.cd-icons .cd-icon-7 {
-  background-image: url("../assets/icons/icon-7.svg"); }
-.cd-icons .cd-icon-8 {
-  background-image: url("../assets/icons/icon-8.svg"); }
+  background-image: url("../assets/icons/generic1.PNG"); }
 
 /* xForm section - basic style */
 .cd-form input[type=text],
