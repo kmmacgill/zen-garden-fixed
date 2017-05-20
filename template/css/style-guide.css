@@ -198,6 +198,10 @@ xIcons
   width: 370px;
   height: 285px; }
 
+.cd-layouts li {
+  width: 370px;
+  height: 285px; }
+
 /* -------------------------------- 
 
 xBasic style
@@ -661,6 +665,31 @@ section {
   background-image: url("../assets/icons/ironcat.png"); }
 .cd-icons .cd-icon-3 {
   background-image: url("../assets/icons/generic1.PNG"); }
+.cd-icons .cd-icon-4 {
+  background-image: url("../assets/icons/xavier.PNG"); }
+.cd-icons .cd-icon-5 {
+  background-image: url("../assets/icons/generic2.png"); }
+.cd-icons .cd-icon-6 {
+  background-image: url("../assets/icons/generic3.png"); }
+
+/*HTML elements section*/
+.cd-elements h2 {
+  font-family: comic2; }
+.cd-elements .cd-layouts li {
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 1em; }
+.cd-elements .cd-layouts .li1 {
+  background-image: url("../assets/icons/page1.png"); }
+.cd-elements .cd-layouts .li2 {
+  background-image: url("../assets/icons/page2.png"); }
+.cd-elements .cd-layouts .li3 {
+  background-image: url("../assets/icons/page3.png"); }
+.cd-elements .cd-layouts .li4 {
+  background-image: url("../assets/icons/page4.png"); }
+.cd-elements .cd-layouts .li5 {
+  background-image: url("../assets/icons/page5.png"); }
 
 /* xForm section - basic style */
 .cd-form input[type=text],

@@ -600,13 +600,52 @@ section {
 		background-image: url('../assets/icons/generic1.png');
 	}
 
-	//.cd-icon-4 {
-	//	background-image: url('../assets/icons/icon-3.svg');
-	//}
-    //
-	//.cd-icon-5 {
-	//	background-image: url('../assets/icons/icon-4.svg');
-	//}
+	.cd-icon-4 {
+		background-image: url('../assets/icons/xavier.PNG');
+	}
+
+	.cd-icon-5 {
+		background-image: url('../assets/icons/generic2.png');
+	}
+
+	.cd-icon-6 {
+		background-image: url('../assets/icons/generic3.png');
+	}
+}
+
+/*HTML elements section*/
+.cd-elements {
+	h2 {
+		font-family: $comic2;
+	}
+	.cd-layouts {
+		li {
+			display: inline-block;
+			background-position: center center;
+			background-repeat: no-repeat;
+			margin: 1em;
+		}
+
+		.li1 {
+			background-image: url('../assets/icons/page1.png');
+		}
+
+		.li2 {
+			background-image: url('../assets/icons/page2.png');
+		}
+
+		.li3 {
+			background-image: url('../assets/icons/page3.png');
+		}
+
+		.li4 {
+			background-image: url('../assets/icons/page4.PNG');
+		}
+
+		.li5 {
+			background-image: url('../assets/icons/page5.png');
+		}
+	}
 }
 
 /* xForm section - basic style */
