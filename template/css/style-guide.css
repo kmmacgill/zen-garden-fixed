@@ -1,13 +1,13 @@
 @import url(https://cdn.rawgit.com/arthursucks/opencomicfont/master/import.css);
 @font-face {
   font-family: comicTitle;
-  src: url("../scss/fonts/KGHAPPY.ttf"); }
+  src: url("../../fonts/KGHAPPY.ttf"); }
 @font-face {
   font-family: comic2;
-  src: url("../scss/fonts/KICOB___.TTF"); }
+  src: url("../../fonts/KICOB___.TTF"); }
 @font-face {
   font-family: comic1;
-  src: url("../scss/fonts/SF Wonder Comic.ttf"); }
+  src: url("../../fonts/SF Wonder Comic.ttf"); }
 /* -------------------------------- 
 
 xBackground 

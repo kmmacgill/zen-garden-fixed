@@ -1,0 +1,350 @@
+@font-face { font-family: comicTitle; src: url('./fonts/KGHAPPY.ttf'); }
+@font-face { font-family: comic2; src: url('./fonts/KICOBI__.TTF'); }
+@font-face { font-family: comic1; src: url('./fonts/SF Wonder Comic.ttf'); }
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-2: #19191a; // Dark Blue
+$color-3: #e4655f; // Red
+$color-4: #e6e6e6; // light grey
+$color-5: #ffffff; // white
+$color-6: #ff0700; // red
+$color-7: #ffff00; // yeller
+$color-8: #9c00f1; // purple
+$color-9: #00f610; // green
+
+$comicTitle: comicTitle;
+$comic1: comic1;
+$comic2: comic2;
+
+body {
+  font-family: comic2;
+  a {
+    color: $color-7;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+            "intro intro intro intro intro intro"
+            "sidebar sidebar sidebar sidebar sidebar sidebar"
+            "main main main main main main";
+  }
+
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header"
+            "preamble"
+            "summary";
+    background-color: purple;
+    grid-column-gap: 10px;
+    header {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:
+              "h1" "h2";
+      grid-area: header;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center;
+      h1 {
+        grid-area: h1;
+        font-size: 3em;
+      }
+      h2 {
+        grid-area: h2;
+        font-size: 3em;
+      }
+    }
+    .summary {
+      grid-area: summary;
+      background-color: $color-1;
+    }
+    .preamble {
+      grid-area: preamble;
+      background-color: $color-1;
+    }
+  }
+
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "req" "part" "ben" "exp" "foot";
+    .explanation {
+      grid-area: exp;
+    }
+    .participation {
+      grid-area: part;
+    }
+    .benefits {
+      grid-area: ben;
+    }
+    .requirements {
+      grid-area: req;
+    }
+    div {
+      background-color: $color-4;
+      border-radius: 10px;
+    }
+    footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 1em;
+      background-color: black;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    background-color: $color-3;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas:
+              "des" "arch" "res";
+      .design-archives {
+        grid-area: arch;
+      }
+      .design-selection {
+        grid-area: des;
+      }
+      .zen-resources {
+        grid-area: res;
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) and (max-width: 900px) {
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+            "intro intro intro intro intro intro"
+            "sidebar sidebar sidebar sidebar sidebar sidebar"
+            "main main main main main main";
+  }
+
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header header header"
+            "preamble preamble preamble"
+            "summary summary summary";
+    background-color: lime;
+    grid-column-gap: 10px;
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+              "h1 h2 h2 h2";
+      grid-area: header;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center;
+      h1 {
+        grid-area: h1;
+        font-size: 3em;
+      }
+      h2 {
+        grid-area: h2;
+        font-size: 3em;
+      }
+    }
+    .summary {
+      grid-area: summary;
+      background-color: $color-1;
+    }
+    .preamble {
+      grid-area: preamble;
+      background-color: $color-1;
+    }
+  }
+
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "req part ben"
+            "req . exp"
+            "foot foot foot";
+    .explanation {
+      grid-area: exp;
+    }
+    .participation {
+      grid-area: part;
+    }
+    .benefits {
+      grid-area: ben;
+    }
+    .requirements {
+      grid-area: req;
+    }
+    div {
+      background-color: $color-4;
+      border-radius: 10px;
+    }
+    footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 2em;
+      background-color: black;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    background-color: $color-3;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+      "des arch"
+      "des res";
+      .design-archives {
+        grid-area: arch;
+      }
+      .design-selection {
+        grid-area: des;
+      }
+      .zen-resources {
+        grid-area: res;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+            "intro intro intro intro intro intro"
+            "main main main main main sidebar";
+  }
+
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "preamble header header"
+            "preamble header header"
+            "summary header header";
+    background-color: lime;
+    grid-column-gap: 10px;
+    header {
+      grid-area: header;
+      font-size: 3em;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center;
+    }
+    .summary {
+      grid-area: summary;
+      background-color: $color-1;
+    }
+    .preamble {
+      grid-area: preamble;
+      background-color: $color-1;
+    }
+  }
+
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "req part ben"
+            "req . exp"
+            "foot foot foot";
+    .explanation {
+      grid-area: exp;
+    }
+    .participation {
+      grid-area: part;
+    }
+    .benefits {
+      grid-area: ben;
+    }
+    .requirements {
+      grid-area: req;
+    }
+    div {
+      background-color: $color-4;
+      border-radius: 10px;
+    }
+    footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 2em;
+      background-color: black;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    background-color: $color-3;
+  }
+
+}

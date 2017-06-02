@@ -1,194 +1,248 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+@font-face {
+  font-family: comicTitle;
+  src: url("./fonts/KGHAPPY.ttf"); }
+@font-face {
+  font-family: comic2;
+  src: url("./fonts/KICOBI__.TTF"); }
+@font-face {
+  font-family: comic1;
+  src: url("./fonts/SF Wonder Comic.ttf"); }
+body {
+  font-family: comic2; }
+  body a {
+    color: #ffff00; }
 
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+@media (max-width: 550px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas: "intro intro intro intro intro intro" "sidebar sidebar sidebar sidebar sidebar sidebar" "main main main main main main"; }
 
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "preamble" "summary";
+    background-color: purple;
+    grid-column-gap: 10px; }
+    .intro header {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: "h1" "h2";
+      grid-area: header;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center; }
+      .intro header h1 {
+        grid-area: h1;
+        font-size: 3em; }
+      .intro header h2 {
+        grid-area: h2;
+        font-size: 3em; }
+    .intro .summary {
+      grid-area: summary;
+      background-color: #5f8ee4; }
+    .intro .preamble {
+      grid-area: preamble;
+      background-color: #5f8ee4; }
 
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "req" "part" "ben" "exp" "foot"; }
+    .main .explanation {
+      grid-area: exp; }
+    .main .participation {
+      grid-area: part; }
+    .main .benefits {
+      grid-area: ben; }
+    .main .requirements {
+      grid-area: req; }
+    .main div {
+      background-color: #e6e6e6;
+      border-radius: 10px; }
+    .main footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 1em;
+      background-color: black; }
+      .main footer a {
+        text-decoration: none; }
 
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
+  aside {
+    grid-area: sidebar;
+    background-color: #e4655f; }
+    aside .wrapper {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: "des" "arch" "res"; }
+      aside .wrapper .design-archives {
+        grid-area: arch; }
+      aside .wrapper .design-selection {
+        grid-area: des; }
+      aside .wrapper .zen-resources {
+        grid-area: res; } }
+@media (min-width: 550px) and (max-width: 900px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas: "intro intro intro intro intro intro" "sidebar sidebar sidebar sidebar sidebar sidebar" "main main main main main main"; }
 
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "preamble preamble preamble" "summary summary summary";
+    background-color: lime;
+    grid-column-gap: 10px; }
+    .intro header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "h1 h2 h2 h2";
+      grid-area: header;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center; }
+      .intro header h1 {
+        grid-area: h1;
+        font-size: 3em; }
+      .intro header h2 {
+        grid-area: h2;
+        font-size: 3em; }
+    .intro .summary {
+      grid-area: summary;
+      background-color: #5f8ee4; }
+    .intro .preamble {
+      grid-area: preamble;
+      background-color: #5f8ee4; }
 
-/* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "req part ben" "req . exp" "foot foot foot"; }
+    .main .explanation {
+      grid-area: exp; }
+    .main .participation {
+      grid-area: part; }
+    .main .benefits {
+      grid-area: ben; }
+    .main .requirements {
+      grid-area: req; }
+    .main div {
+      background-color: #e6e6e6;
+      border-radius: 10px; }
+    .main footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 2em;
+      background-color: black; }
+      .main footer a {
+        text-decoration: none; }
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
+  aside {
+    grid-area: sidebar;
+    background-color: #e4655f; }
+    aside .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "des arch" "des res"; }
+      aside .wrapper .design-archives {
+        grid-area: arch; }
+      aside .wrapper .design-selection {
+        grid-area: des; }
+      aside .wrapper .zen-resources {
+        grid-area: res; } }
+@media (min-width: 900px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas: "intro intro intro intro intro intro" "main main main main main sidebar"; }
 
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "preamble header header" "preamble header header" "summary header header";
+    background-color: lime;
+    grid-column-gap: 10px; }
+    .intro header {
+      grid-area: header;
+      font-size: 3em;
+      text-align: center;
+      font-family: comicTitle;
+      justify-self: center; }
+    .intro .summary {
+      grid-area: summary;
+      background-color: #5f8ee4; }
+    .intro .preamble {
+      grid-area: preamble;
+      background-color: #5f8ee4; }
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
+  .main {
+    grid-area: main;
+    background-color: orange;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "req part ben" "req . exp" "foot foot foot"; }
+    .main .explanation {
+      grid-area: exp; }
+    .main .participation {
+      grid-area: part; }
+    .main .benefits {
+      grid-area: ben; }
+    .main .requirements {
+      grid-area: req; }
+    .main div {
+      background-color: #e6e6e6;
+      border-radius: 10px; }
+    .main footer {
+      grid-area: foot;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 2em;
+      background-color: black; }
+      .main footer a {
+        text-decoration: none; }
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
-}
+  aside {
+    grid-area: sidebar;
+    background-color: #e4655f; } }
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
-
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
-
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
-
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
-
-
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+/*# sourceMappingURL=style.css.map */
